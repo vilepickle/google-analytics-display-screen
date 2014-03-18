@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Google Analytics Bookmarklets</title>
+</head>
+
+<body>
+<!--
+//Main Elements
+//
+//element1: Loads jQuery into the analytics page
+//#ID-navPanelContainer: Side Analytics navbar
+//#ID-reportTitle: "Overview" Text at the top of the Analytics page
+//#ID-headerPanel: The GA header
+//#ID-newKennedyHeader: "New" header added in 2014
+//#ID-overviewPanelTrafficSourceValueOrganicTable: "Top Keywords" Table
+//#ID-overviewPanelGeoComponent: Geo location Table
+//#ID-footerPanel: Analytics footer navigation
+//#ID-navToggle: Small gray bar on the left side used to separate navigation
+-->
+
+<h1>First Bookmarklet in Sequence</h1>
+<a href="javascript:
+var element1 = document.createElement('script');element1.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';element1.type='text/javascript';document.getElementsByTagName('head')[0].appendChild(element1);
+var div = document.getElementById('ID-navPanelContainer').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-reportTitle').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-newKennedyHeader').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-headerPanel').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-overviewPanelTrafficSourceValueOrganicTable').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-overviewPanelGeoComponent').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-footerPanel').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+var div = document.getElementById('ID-navToggle').style; if(div) void(div.display=(div.display=='none')? 'block':'none');
+">Main</a>
+<hr />
+<h2>Second Bookmarklet in Sequence</h2>
+<a href="javascript:
+void($('#ID-report div div div:contains(\'Real-time reports do not include profile filtering\')').css('display','none'));
+void($('#ID-overviewPanelTrafficSourceNameTable').siblings('div').css('display','none'));
+void($('#ID-overviewPanelRequestUriTable').siblings('div').css('display','none'));
+void($('#ID-overviewPanelTrafficSourceValueOrganicTable').siblings('div').css('display','none'));
+void($('#ID-overviewPanelGeoComponent').siblings('div').css('display','none'));
+void($('#ID-reportHeader-titleSection').css('display','none'));
+void($('#ID-reportHeader-toolbarSection').css('display','none'));
+void($('#ID-realtimeReportFootnote').css('display','none'));
+void($('#ID-mainLayoutContainer').css('background-color', '#FFF'));
+void($('body').css('background-color', '#FFF'));
+void($('#main-body').css('min-width','960px'));
+void($('body').css('height','100%'));
+void($('#ID-secondChart').css('background-color', '#FFF'));">Second</a>
+</body>
+</html>
