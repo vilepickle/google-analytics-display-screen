@@ -34,8 +34,10 @@ var div = document.getElementById('ID-navToggle').style; if(div) void(div.displa
 <h2>Second Bookmarklet in Sequence</h2>
 <a href="javascript:
 void($('#ID-report div div div:contains(\'Real-time reports do not include profile filtering\')').css('display','none'));
+void($('#ID-overtimePanel').css('margin-left','0'));
 void($('#ID-overviewPanelTrafficSourceNameTable').siblings('div').css('display','none'));
 void($('#ID-overviewPanelRequestUriTable').siblings('div').css('display','none'));
+void($('#ID-overviewPanelRequestUriTable').parent().parent().css('padding-right','0'));
 void($('#ID-overviewPanelTrafficSourceValueOrganicTable').siblings('div').css('display','none'));
 void($('#ID-overviewPanelGeoComponent').siblings('div').css('display','none'));
 void($('#ID-reportHeader-titleSection').css('display','none'));
@@ -43,9 +45,11 @@ void($('#ID-reportHeader-toolbarSection').css('display','none'));
 void($('#ID-report').css('padding','0 60px'));
 void($('#ID-realtimeReportFootnote').css('display','none'));
 void($('#ID-mainLayoutContainer').css('background-color', '#FFF'));
+void($('#ID-contextOverviewPanel').css('margin-bottom','25px'));
 void($('body').css('background-color', '#FFF'));
 void($('#main-body').css('min-width','960px'));
-void($('body').css('height','100%'));
+void($('body.galaxy').css('height','100%'));
+void($('body.galaxy').css('font-size','120%'));
 void($('#ID-secondChart').css('background-color', '#FFF'));">Second</a>
 </body>
 </html>
